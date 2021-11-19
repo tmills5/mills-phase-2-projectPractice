@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "react-bootstrap/Button"
 
-function Header() {
+function Header(props) {
     return (
         <>
-            <h1>Super Cool Header</h1>
+            <h1>{props.saying}</h1>
             <Button>Button</Button>
         </>
     )
