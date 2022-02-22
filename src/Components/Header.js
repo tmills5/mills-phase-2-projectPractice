@@ -1,11 +1,16 @@
 import React from "react";
-import Button from "react-bootstrap/Button"
+import "./Header.css";
+import spaceShip from "../images/spaceShip.png";
+import doubleHelix from "../images/doubleHelix.png";
 
-function Header(props) {
+function Header() {
     return (
         <>
-            <h1>{props.saying}</h1>
-            <Button>Button</Button>
+            <h1>
+                <img className="header-left-image" src={spaceShip} alt='spaceship' />
+                    This is my header
+                <img className="header-right-image" src={doubleHelix} alt='helix' />
+            </h1>
         </>
     )
 };
