@@ -24,6 +24,25 @@ function Form() {
         setAuthor("");
 
     };
+
+    const [foundTitles, setFoundTitles] = useState(books);
+
+  const filter = (e) => {
+    const keyword = e.target.value;
+
+    if (keyword !== '') {
+      const results = books.filter((book) => {
+        return book.title.toLowerCase().startsWith(keyword.toLowerCase());
+        
+      });
+      setFoundTitles(results);
+    } else {
+      setFoundTitles(books);
+      
+    }
+
+    setName(title);
+  };
    
 
     return(
@@ -34,7 +53,7 @@ function Form() {
             <button type='submit' name='submit'>Submit</button>
         </form>
         
-        <input type="text" placeholder="filter"/>
+        <input type="text" placeholder="filter" value={title} onChange={filter} />
         </>
     )
 }
