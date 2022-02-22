@@ -41,7 +41,7 @@ function Form() {
       
     }
 
-    setName(title);
+    setTitle(title);
   };
    
 
